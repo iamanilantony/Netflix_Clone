@@ -1,0 +1,92 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    z-index: 5;
+    color: white;
+    font-size: 14px;
+    background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 50%);
+}
+
+.nav_logo {
+    padding-top: 5px;
+    padding-left: 20px;
+    width: 120px;
+    object-fit: contain;
+    margin-left: 25px;
+    margin-right: 30px;
+}
+
+.nav_avatar {
+    padding-top: 20px;
+    width: 40px;
+    object-fit: contain;
+    padding-bottom: 20px;
+    border-radius: 5%;
+}
+
+.nav_black {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    z-index: 5;
+    background-color: #111;
+    color: white;
+    font-size: 14px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left span {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    z-index: 6;
+    margin-left: 30px;
+}
+
+.right .icons {
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+.options {
+    display: none;
+    background-color: #111;
+}
+
+.options span {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.profile {
+    margin-right: 20px;
+}
+
+.profile:hover {
+    .options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+}
+
+.options span:hover {
+    background-color: rgb(71, 71, 71);
+}
