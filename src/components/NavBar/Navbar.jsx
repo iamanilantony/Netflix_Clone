@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <div className={show ? "nav_black" : "nav"}>
       <div className="left">
-        <span className="title redtitle"><p>Multiflex</p></span>   
+        <span className="title redtitle"><p>MULTIFLEX</p></span>   
       </div>
       <div className="center">
         <span>Homepage</span>
