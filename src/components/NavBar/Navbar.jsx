@@ -16,11 +16,9 @@ function Navbar() {
   return (
     <div className={show ? "nav_black" : "nav"}>
       <div className="left">
-        <img
-          className="nav_logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg"
-          alt="Netflix"
-        />
+        <span className="title redtitle"><p>Multiflex</p></span>   
+      </div>
+      <div className="center">
         <span>Homepage</span>
         <span>Series</span>
         <span>Movies</span>
@@ -42,8 +40,24 @@ function Navbar() {
             <span>Settings</span>
             <span>Logout</span>
           </div>
-        </div>
-      </div>
+         {/*
+        <Search className="icons" />
+        <span>Kid</span>
+        <Notifications className="icons" />
+        <img
+          className="nav_avatar"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+          alt="Netflix Avatar"
+        />
+        <div className="profile">
+          <ArrowDropDown className="icons" />
+          <div className="options">
+            <span>Settings</span>
+            <span>Logout</span>
+          </div>
+        </div>*/}
+      </div> 
+    </div>
     </div>
   );
 }

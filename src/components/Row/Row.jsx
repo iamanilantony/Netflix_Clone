@@ -14,6 +14,12 @@ function Row({ title, fetchUrl, isLargeRow }) {
     },
   };
 
+  //Function to extract date
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) : str;
+  }
+
+
   //Set State
   const [trailerUrl, SetTrailerUrl] = useState("");
   const [movies, SetMovies] = useState([]);
@@ -47,23 +53,28 @@ function Row({ title, fetchUrl, isLargeRow }) {
       <h1>{title}</h1>
       <div className="row_posters">
         {movies.map((movie) => (
-          //   console.log(movie.status)
-          // (
-          //   <video
-          //     src="{`${base_url}${
-          //     isLargeRow ? movie.video : movie.video.include_image_language=en"
-          //   ></video>
-          // ),
-          <img
-            key={movie.id}
-            onClick={() => handleClick(movie)}
-            className={`row_poster ${isLargeRow && "row_posterLarge"}`}
-            // className="row_poster"
-            src={`${base_url}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path
-            }`}
-            alt={movie.name}
-          />
+          <>
+          <div className="row_item">
+            <img
+                key={movie.id}
+                onClick={() => handleClick(movie)}
+                // className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+                className={`row_poster`}
+                // className="row_poster"
+                src={`${base_url}${
+                //   isLargeRow ? movie.poster_path : movie.backdrop_path
+                movie.poster_path
+                }`}
+                alt={movie.name}
+            /> 
+                    <div className="rowtitle">
+                        <span>{`${movie.title}`}</span>  
+                        <p>
+                        {`${ truncate(movie?.release_date, 5) }`}
+                        </p>
+                    </div>
+            </div>
+          </>
         ))}
       </div>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
