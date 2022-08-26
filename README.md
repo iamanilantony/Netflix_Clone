@@ -1,2 +1,2 @@
 
-Netflix Clome Created Using React
+Netflix Clome Created Using React and using TMDB api
